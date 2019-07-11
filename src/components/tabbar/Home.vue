@@ -9,6 +9,29 @@
 </template>
 
 <script>
+	export default {
+		data(){
+			return{}
+		},
+		created(){
+			this.getLunBo();
+		},
+		methods: {
+			getLunBo(){
+				this.$http.get("http://vue.studyit.io/api/getlubo").then(reuslt =>{
+					console.log(result);
+				})
+//				$.ajax({
+//					type:"GET",
+//					url:"http://vue.studyit.io/api/getlubo",
+//					dataType: "JSON",
+//					success:function(data){
+//						console.log(data.body)
+//					}
+//				})
+			}
+		}
+	}
 </script>
 
 <style scoped lang="scss">
